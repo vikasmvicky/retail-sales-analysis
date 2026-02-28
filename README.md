@@ -50,3 +50,37 @@ Choose format: CSV (Comma delimited)
 Save as: retail_sales.csv
 **Check MySQL Secure Folder**
 SHOW VARIABLES LIKE 'secure_file_priv';
+---
+
+### Step 3: Import CSV into MySQL
+
+```sql
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/retail_sales.csv'
+INTO TABLE retail_sales
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+Data Cleaning
+
+Checked for NULL values and removed incomplete records.
+SELECT *
+FROM retail_sales
+WHERE transaction_id IS NULL
+   OR sale_date IS NULL
+   OR sale_time IS NULL
+   OR gender IS NULL
+   OR category IS NULL
+   OR quantity IS NULL
+   OR cogs IS NULL
+   OR total_sale IS NULL;
+Exploratory Data Analysis (EDA)
+
+Performed analysis on:
+Total transactions
+Unique customer
+Revenue by category
+Monthly sales trends
+Top customers
+Shift-based sales distribution
+

@@ -1,31 +1,41 @@
 # retail-sales-analysis
-Project Overview
+This project analyzes retail sales data using MySQL.
+The goal is to perform data cleaning, exploratory data analysis (EDA), and business-driven analysis using structured SQL queries.
 
-This project focuses on analyzing retail sales data using SQL.
-The objective is to explore the dataset, clean missing values, perform exploratory data analysis (EDA), and extract meaningful business insights.
-
-This project demonstrates foundational SQL skills including:
-
+The project demonstrates:
 Database creation
+Data validation and cleaning
+Aggregations (SUM, AVG, COUNT)
+GROUP BY & HAVING
+Window functions (RANK)
+CTE (Common Table Expressions)
+Business insight generation
 
-Data cleaning
+Database Information
 
-Aggregate functions
+Database Name: retail_analysis
+Table Name: retail_sales
+SQL Version Used: MySQL 8.0
+Data Source: Excel dataset (converted to CSV for import)
 
-GROUP BY and HAVING
+Table Schema
+CREATE TABLE retail_sales (
+    transaction_id INT PRIMARY KEY,
+    sale_date DATE,
+    sale_time TIME,
+    customer_id INT,
+    gender VARCHAR(15),
+    age INT,
+    category VARCHAR(20),
+    quantity INT,
+    price_per_unit DECIMAL(10,2),
+    cogs DECIMAL(10,2),
+    total_sale DECIMAL(10,2)
+);
 
-Subqueries
-
-Basic business analysis
-
- Project Objectives
-
-Set up a retail sales database
-
-Clean and validate the dataset
-
-Perform exploratory data analysis (EDA)
-
-Answer real-world business questions using SQL
-
-Generate insights and recommendations
+Importing Excel Dataset into MySQL
+Step 1: Convert Excel to CSV
+Open Excel file
+Click File → Save As
+Choose format: CSV (Comma delimited)
+Save as: retail_sales.csv

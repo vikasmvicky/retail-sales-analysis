@@ -1,6 +1,6 @@
 # 🛒 Retail Sales Analysis (SQL Project)
 
-## 📖 Project Overview
+##  Project Overview
 
 This project analyzes retail sales data using MySQL.  
 The goal is to perform data cleaning, exploratory data analysis (EDA), and business-driven analysis using structured SQL queries.
@@ -17,7 +17,7 @@ This project demonstrates:
 
 ---
 
-## 🗂 Database Information
+##  Database Information
 
 - **Database Name:** `retail_analysis`
 - **Table Name:** `retail_sales`
@@ -26,7 +26,7 @@ This project demonstrates:
 
 ---
 
-## 🏗 Table Schema
+##  Table Schema
 
 ```sql
 CREATE TABLE retail_sales (
@@ -42,3 +42,11 @@ CREATE TABLE retail_sales (
     cogs DECIMAL(10,2),
     total_sale DECIMAL(10,2)
 );
+Importing Excel Dataset into MySQL
+Step 1: Convert Excel to CSV
+Open Excel file
+Click File → Save As
+Choose format: CSV (Comma delimited)
+Save as: retail_sales.csv
+**Check MySQL Secure Folder**
+SHOW VARIABLES LIKE 'secure_file_priv';
